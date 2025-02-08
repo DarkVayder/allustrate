@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import ResponsiveNav from '@/components/Home/Navbar/ResponsiveNav'
+import { Toaster } from "sonner";
 
 const font = Roboto({
   weight:['100','300','400','500','700','900',],
@@ -26,7 +27,7 @@ export default function RootLayout({
       >
         <ResponsiveNav/>
         {children}
-      
+       <Toaster />
       </body>
     </html>
   );
