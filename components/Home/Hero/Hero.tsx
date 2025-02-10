@@ -49,13 +49,13 @@ const Hero = () => {
   return (
     <div className='w-[95%] min-h-screen relative mx-auto mt-[20vh]'>
       <div className='relative z-10 flex flex-col items-center justify-center'>
-        <h1 className='text-6xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent'>
+        <h1 data-aos='fade-up' className='text-6xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent'>
           Welcome to ALLUS
         </h1>
-        <p className='text-2xl md:text-4xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold text-center bg-gradient-to-r from-orange-500 to-cyan-700 bg-clip-text text-transparent'>
+        <p data-aos='fade-up' data-aos-delay="100" className='text-2xl md:text-4xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold text-center bg-gradient-to-r from-orange-500 to-cyan-700 bg-clip-text text-transparent'>
           Create beautiful images with <br /> Artificial Intelligence
         </p>
-        <p className='mt-3 text-sm md:text-base font-semibold text-center text-gray-300'>
+        <p data-aos='fade-up' data-aos-delay="100" className='mt-3 text-sm md:text-base font-semibold text-center text-gray-300'>
           Explore our AI-powered image generator tool
         </p>
 
