@@ -1,15 +1,21 @@
 "use client";
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { Navlinks } from '@/constant/constants';
 import { MenuIcon, Search, ShoppingCart } from 'lucide-react';
 
 type Props = {
   openNav: () => void;
 };
 
-const Nav = ({ openNav }: Props) => {
+const Navlinks = [
+  { id: 1, url: '#', label: 'Home' },
+  { id: 2, url: '#', label: 'Image' },
+  { id: 3, url: '#', label: 'Blog' },
+  { id: 4, url: '#', label: 'Shop' },
+  { id: 5, url: '#', label: 'Contact' },
+];
 
+const Nav = ({ openNav }: Props) => {
   const [navBg, setNavBg] = useState(false);
 
   useEffect(() => {
@@ -23,7 +29,6 @@ const Nav = ({ openNav }: Props) => {
     return () => window.removeEventListener("scroll", handle);
   }, []);
 
-  // Conditional background style
   const bgStyle = navBg ? 'bg-gray-900 shadow-md' : '';
 
   return (
@@ -32,7 +37,6 @@ const Nav = ({ openNav }: Props) => {
       <h1 className="text-3xl text-white font-bold">ALLUS</h1>
 
       <div className="md:flex items-center space-x-10 hidden">
-        {/* Nav Links */}
         {Navlinks.map((link) => (
           <Link key={link.id} href={link.url} className="relative text-white text-base w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-yellow-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
             <p className="text-white text-xl hover:text-gray-300">{link.label}</p>

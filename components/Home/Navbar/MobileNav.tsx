@@ -1,4 +1,3 @@
-import { Navlinks } from '@/constant/constants';
 import { XIcon } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
@@ -7,6 +6,14 @@ type Props = {
   showNav: boolean;
   closeNav: () => void;
 };
+
+const Navlinks = [
+  { id: 1, url: '#', label: 'Home' },
+  { id: 2, url: '#', label: 'Image' },
+  { id: 3, url: '#', label: 'Blog' },
+  { id: 4, url: '#', label: 'Shop' },
+  { id: 5, url: '#', label: 'Contact' },
+];
 
 const MobileNav = ({ showNav, closeNav }: Props) => {
   return (
